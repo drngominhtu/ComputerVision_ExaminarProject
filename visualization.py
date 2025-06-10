@@ -16,9 +16,9 @@ def save_prediction_images(X_test, y_test, y_pred, sample_size=10):
         cv2.putText(img_large, f"Pred: {pred_label}", (20, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (255), 2)
         
         # Lưu file
-        filename = f"result_img_{i}.png"
-        cv2.imwrite(filename, img_large)
-        print(f"Đã lưu kết quả vào file {filename}")
+        # filename = f"result_img_{i}.png"
+        # cv2.imwrite(filename, img_large)
+        # print(f"Đã lưu kết quả vào file {filename}")
 
 def plot_line_chart(sample_sizes, accuracies):
     """Vẽ biểu đồ đường accuracy"""

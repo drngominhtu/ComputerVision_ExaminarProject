@@ -36,15 +36,15 @@ def show_confusion_matrix(y_test, y_pred, sample_size):
 def show_accuracy_charts(X_train, y_train, X_test, y_test):
     """Display accuracy charts in separate window"""
     try:
-        sample_sizes = [100, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000]
+        sample_sizes = [100, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000]
         accuracies = []
         
         print("Computing accuracy for different training sizes...")
         for i, size in enumerate(sample_sizes):
             temp_model = KNN(k=5)
             temp_model.fit(X_train[:size], y_train[:size])
-            temp_pred = temp_model.predict(X_test[:50])  # Reduce sample for speed
-            temp_acc = np.mean(temp_pred == y_test[:50])
+            temp_pred = temp_model.predict(X_test[:100])  # Reduce sample for speed
+            temp_acc = np.mean(temp_pred == y_test[:100])
             accuracies.append(temp_acc * 100)
             print(f"  {i+1}/{len(sample_sizes)}: Train size {size} -> Accuracy {temp_acc*100:.2f}%")
         
