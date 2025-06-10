@@ -25,23 +25,32 @@ ComputerVision_ExaminarProject/
 
 ```mermaid
 graph TD
-    A[Data Loading] --> B[Data Preprocessing]
-    B --> C[KNN Model Training]
-    C --> D[Model Evaluation]
-    D --> E{Visualization Choice}
-    E -->|1| F[Confusion Matrix]
-    E -->|2| G[Accuracy Charts]
-    E -->|3| H[Class Accuracy]
-    E -->|4| I[Statistics Summary]
-    E -->|5| J[Sample Predictions]
-    D --> K[Real-time Prediction]
+    A[Data Loading & Preprocessing] --> B[KNN Model Training]
+    B --> C[Model Evaluation]
+    C --> D{Visualization Choice}
+    D -->|1| E[Confusion Matrix]
+    D -->|2| F[Accuracy Charts]
+    D -->|3| G[Class Accuracy]
+    D -->|4| H[Statistics Summary]
+    D -->|5| I[Sample Predictions]
+    C --> J[Real-time Prediction]
     
     subgraph "Core Components"
-        L[data_loader.py]
-        M[knn_model.py]
-        N[evaluation.py]
-        O[visualization.py]
+        K[data_loader.py<br/>Loading + Preprocessing]
+        L[knn_model.py<br/>ML Algorithm]
+        M[evaluation.py<br/>Performance Testing]
+        N[visualization.py<br/>Image Output]
+        O[detailed_evaluation.py<br/>Advanced Metrics]
+        P[real_time_prediction.py<br/>Live Recognition]
+        Q[main.py<br/>Program Controller]
     end
+    
+    A --> K
+    B --> L
+    C --> M
+    E --> N
+    J --> P
+    D --> Q
 ```
 
 ## 📚 File Details and Functions
@@ -269,4 +278,4 @@ This project is for educational purposes. Dataset credit to Sign Language MNIST.
 
 **Author**: Dr.ngominhtu
 **Date**: 10/06/2025  
-**Course**: Computer Vision 
+**Course**: Computer Vision
