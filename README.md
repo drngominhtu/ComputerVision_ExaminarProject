@@ -267,6 +267,6 @@ This project is for educational purposes. Dataset credit to Sign Language MNIST.
 
 ---
 
-**Author**: Computer Vision Project  
-**Date**: 2024  
-**Course**: Computer Vision and Pattern Recognition
+**Author**: Dr.ngominhtu
+**Date**: 10/06/2025  
+**Course**: Computer Vision 
